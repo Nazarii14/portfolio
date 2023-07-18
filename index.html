@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Nazarii Protskiv Portfolio</title>
+    <script
+      src="https://kit.fontawesome.com/3366807418.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <h2 href="https://euphonious-meringue-1da142.netlify.app/">
+            pablo<span id="surname"></span>
+          </h2>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i
+              class="fa-sharp fa-solid fa-circle-xmark"
+              onclick="closemenu()"
+            ></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+        <div class="main-section">
+          <div class="blob"></div>
+          <div class="header-text">
+            <p>Junior Python Developer</p>
+            <h1>Hello, I'm <br /><span>Nazarii</span> Protskiv</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------- about ---------------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/main_photo.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I am a diligent student currently started my third year pursuing a
+              degree <br />in Applied Mathematics and Informatics.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Python</span><br />Python</li>
+                <li><span>Python</span><br />Python</li>
+                <li><span>Python</span><br />Python</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>exp</span><br />Python</li>
+                <li><span>exp</span><br />Python</li>
+                <li><span>exp</span><br />Python</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>edu</span><br />Python</li>
+                <li><span>edu</span><br />Python</li>
+                <li><span>edu</span><br />Python</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------- education ---------------------- -->
+    <div id="education">
+      <div class="education-container">
+        <h1 class="sub-title">Education</h1>
+        <div class="education-list">
+          <div class="education-item">
+            <h2>
+                <i class="fa-solid fa-building-columns"></i>Lviv Ivan Franko National
+              University
+            </h2>
+            <p>2021 - present</p>
+          </div>
+          <div class="education-item">
+            <h2>
+                <i class="fa-solid fa-school"></i></i>Lviv Physics and
+              Mathematics Lyceum
+            </h2>
+            <p>2018 - 2021</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------- skills ---------------------- -->
+    <div id="skills">
+      <div class="container">
+        <h1 class="sub-title">My skills</h1>
+        <div class="skills-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Something</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              ex rerum nostrum. Molestias debitis aliquam mollitia consequuntur
+              vero iusto, sit magnam tenetur temporibus! Nulla beatae animi
+              fugiat saepe, quas voluptatem.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Something</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              ex rerum nostrum. Molestias debitis aliquam mollitia consequuntur
+              vero iusto, sit magnam tenetur temporibus! Nulla beatae animi
+              fugiat saepe, quas voluptatem.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Something</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              ex rerum nostrum. Molestias debitis aliquam mollitia consequuntur
+              vero iusto, sit magnam tenetur temporibus! Nulla beatae animi
+              fugiat saepe, quas voluptatem.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------- projects ---------------------- -->
+
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">Personal projects</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/main_photo.jpg" />
+            <div class="layer">
+              <h3>Some app</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+              <a href=""><i class="fa-solid fa-link-simple"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/main_photo.jpg" />
+            <div class="layer">
+              <h3>Some app</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+              <a href=""><i class="fa-solid fa-link-simple"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/main_photo.jpg" />
+            <div class="layer">
+              <h3>Some app</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+              <a href=""><i class="fa-solid fa-link-simple"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+
+    <!-- ---------------------- contact ---------------------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-envelope"></i>rosaka1429@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+380963566929</p>
+            <p><i class="fa-brands fa-telegram"></i>@zbyrachnosochkiv</p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/nazarii.protskiv/"
+                target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/mini_rosaka/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/nazarii-protskiv-3876b6277/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+            <a
+              href="/Nazarii Protskiv CV Resume v2.3.pdf"
+              download
+              class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="copyright">
+            <p>Copyright © Nazarii Protskiv</p>
+        </div> -->
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
