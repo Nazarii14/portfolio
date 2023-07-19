@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
 * {
     margin: 0;
@@ -27,6 +28,28 @@ body {
 .container {
     padding: 10px 10%
 }
+
+
+/* section colors */
+
+.red {
+    background: #dd3f31;
+}
+
+.blue {
+    background: #3c31dd;
+}
+
+.purple {
+    background: #ee82ee;
+}
+
+.pink {
+    background: #ff0066;
+}
+
+
+/* navigation bar */
 
 nav {
     display: flex;
@@ -73,6 +96,8 @@ nav ul li a:hover::after {
 }
 
 
+/* main section */
+
 .main-section {
     display: flex;
     flex-direction: row;
@@ -83,17 +108,17 @@ nav ul li a:hover::after {
     padding: 20px;
 }
 
-.blob {
-    margin-top: 80px;
+.main-blob {
+    margin-top: 40px;
     width: 550px;
     height: 550px;
     justify-content: center;
     align-items: center;
     background-size: cover;
-    box-shadow: 0px 0px 16px 16px #01cbce;
+    box-shadow: 0px 0px 5px 5px #01cbce;
     background-position: center center;
     background-image: url("images/photo_2022-06-23_00-55-42.jpg");
-    animation: animate 25s ease-in-out infinite;
+    animation: animate 15s ease-in-out infinite;
     transition: all 5s ease-in-out;
 }
 
@@ -159,77 +184,72 @@ nav ul li a:hover::after {
 
 .row {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .about-col-1 {
-    flex-basis: 35%;
+    flex-basis: 34%;
 }
 
 .about-col-1 img {
     width: 100%;
     border-radius: 20px;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.about-col-1 img:hover {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px 2px #ffffff;
+    transform: scale(1.05);
 }
 
 .about-col-2 {
-    flex-basis: 60%;
+    flex-basis: 30%;
 }
 
 .sub-title {
+    text-align: left;
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.about-card {
+    margin: 20px;
+    padding: 20px;
+    background: #262626;
+    border-radius: 10px;
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+.about-card:hover {
+    box-shadow: 0px 0px 2px 2px #ffffff;
+}
+
+.about-card p span {
+    font-weight: 600;
+}
+
+.sub-title.centered {
     text-align: center;
     font-size: 60px;
     font-weight: 600;
     color: white;
 }
 
-.tab-titles {
-    display: flex;
-    margin: 20px 0 40px;
-}
-
-.tab-links {
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-}
-
-.tab-links::after {
-    content: '';
-    width: 0px;
-    height: 3px;
-    background: #01cbce;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-
-.tab-links.active-link::after {
-    width: 100%;
-}
-
-.tab-contents ul li {
-    list-style: none;
-    margin: 10px 0;
-}
-
-.tab-contents ul li span {
-    color: #00fbff;
-    font-size: 14px;
-}
-
-.tab-contents {
-    display: none;
-}
-
-.tab-contents.active-tab {
-    display: block;
-}
 
 /* education */
+
+.education-header {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 50px;
+}
 
 .education-container {
     margin: 0 auto;
@@ -252,13 +272,180 @@ nav ul li a:hover::after {
 }
 
 .education-item h2 i {
+    font-size: 10px;
     margin-right: 15px;
 }
+
+.education-lyceum {
+    display: flex;
+    flex-direction: row;
+}
+
+.education-university {
+    display: flex;
+    flex-direction: row;
+}
+
+.empty-space {
+    display: none;
+}
+
+.card-lyceum {
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-university {
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-lyceum h2 i, .card-university h2 i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.card-lyceum h2 {
+    flex-basis: 35%;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+
+.card-university h2 {
+    flex-basis: 35%;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+
+.card-lyceum a {
+    padding-bottom: 10px;
+    margin: 10px;
+    font-size: 15px;
+    color: #fff700;
+}
+
+.card-university a {
+    padding-bottom: 10px;
+    margin: 10px;
+    font-size: 15px;
+    color: #fff700;
+}
+
 
 
 /* skills */
 #skills {
     padding: 30px 0;
+}
+
+.container-skills {
+    align-items: center;
+}
+
+.my-hard-skills-container, .my-soft-skills-container {
+    overflow: hidden;
+    justify-content: space-between;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+}
+
+.myskills-header {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.my-hard-skills-container ul, .my-soft-skills-container ul {
+    margin: 10px;
+    padding: 30px;
+}
+
+.my-skills-blob-wrapper {
+    flex-basis: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.my-skills-blob {
+    position: relative;
+    margin-top: 40px;
+    width: 400px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    border: 5px solid #454545;
+    background-position: center center;
+    background: #262626;
+    animation: animate_hard_skills_blob 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes animate_hard_skills_blob {
+    0%{
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    }
+    25% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    50% {
+        border-radius: 46% 54% 59% 41% / 39% 57% 43% 61%;
+    }
+    75% {
+        border-radius: 61% 39% 38% 62% / 46% 44% 56% 54%;
+    }
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+
+.hard-skills-blob-text, 
+.soft-skills-blob-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hard-skills-blob-text h2 {
+    font-size: 24px;
+}
+
+
+.my-hard-skills-container ul,
+.my-soft-skills-container ul {
+    flex-basis: 45%;
+}
+
+.my-hard-skills-container ul li:hover {
+    transform: translateX(-25px);
+}
+
+.my-soft-skills-container ul li:hover {
+    transform: translateX(25px);
+}
+
+
+.my-hard-skills-container ul li,
+.my-soft-skills-container ul li {
+    list-style: none;
+    background: #262626;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 30px;
+    transition: transform, background, color 0.5s, 0.5s, 0.55s;
 }
 
 .skills-list {
@@ -274,7 +461,7 @@ nav ul li a:hover::after {
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    transition: background 0.5s, transform 0.25s;
 }
 
 .skills-list div i {
@@ -301,9 +488,42 @@ nav ul li a:hover::after {
     transform: translateY(-10px);
 }
 
+.hard-skills-list-hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+.soft-skills-list-hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.my-skills-blob.blob-hidden {
+    opacity: 1;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+.show-blob {
+    opacity: 0;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+
 
 /* portfolio */
 #portfolio {
+    height: 100vh;
     padding: 50px 0;
 }
 
@@ -389,6 +609,95 @@ nav ul li a:hover::after {
 }
 
 
+/* projects */
+
+.projects-title {
+    text-align: center;
+    margin: 80px 0;
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.slide-container {
+    width: 90%;
+    height: 500px;
+    margin-bottom: 40px;
+}
+
+.swiper-pagination {
+    margin-top: 100px;
+}
+
+.image-content, .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 14px;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #3c31dd;
+    border-radius: 25px 25px 0 0;
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #262626;
+    overflow: hidden;
+}
+
+.project-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+
+.projects-button {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    background-color: #01cbce;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.projects-button:hover {
+    background: #3c31dd;
+}
+
 /* contact */
 .contact-left {
     flex-basis: 35%;
@@ -471,6 +780,8 @@ nav .fa-sharp, nav .fa-solid {
 }
 
 
+
+
 /* css for small screens */
 @media only screen and (max-width: 600px) {
     .header-text {
@@ -550,7 +861,7 @@ nav .fa-sharp, nav .fa-solid {
 
 
 @media only screen and (max-width: 1500px) {
-    .blob {
+    .main-blob {
         width: 500px;
         height: 500px;
     }
@@ -560,7 +871,7 @@ nav .fa-sharp, nav .fa-solid {
 }
 
 @media only screen and (max-width: 1400px) {
-    .blob {
+    .main-blob {
         width: 550px;
         height: 550px;
     }
@@ -570,21 +881,21 @@ nav .fa-sharp, nav .fa-solid {
 }
 
 @media only screen and (max-width: 1350px) {
-    .blob {
+    .main-blob {
         width: 500px;
         height: 500px;
     }
 }
 
 @media only screen and (max-width: 1300px) {
-    .blob {
+    .main-blob {
         width: 450px;
         height: 450px;
     }
 }
 
 @media only screen and (max-width: 1200px) {
-    .blob {
+    .main-blob {
         width: 400px;
         height: 400px;
     }
@@ -594,7 +905,7 @@ nav .fa-sharp, nav .fa-solid {
 }
 
 @media only screen and (max-width: 1150px) {
-    .blob {
+    .main-blob {
         width: 350px;
         height: 350px;
     }
@@ -604,7 +915,7 @@ nav .fa-sharp, nav .fa-solid {
 }
 
 @media only screen and (max-width: 1100px) {
-    .blob {
+    .main-blob {
         width: 300px;
         height: 300px;
     }
@@ -614,7 +925,7 @@ nav .fa-sharp, nav .fa-solid {
 }
 
 @media only screen and (max-width: 1000px) {
-    .blob {
+    .main-blob {
         width: 250px;
         height: 250px;
     }
@@ -628,7 +939,7 @@ nav .fa-sharp, nav .fa-solid {
         display: flex;
         flex-direction: column;
     }
-    .blob {
+    .main-blob {
         width: 100%;
         height: 100%;
     }
