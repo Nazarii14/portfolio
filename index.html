@@ -3,25 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <link
       rel="stylesheet"
-      href="cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.css"
+      href="style/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.css"
     />
     <title>Nazarii Protskiv Portfolio</title>
     <script
       defer
-      src="cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"
+      src="js/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"
     ></script>
     <script
       src="https://kit.fontawesome.com/3366807418.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="app.js"></script>
+    <script defer src="js/app.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
   </head>
   <body>
     <div id="header">
@@ -62,38 +63,129 @@
     <!-- ---------------------- about ---------------------- -->
     <div id="about">
       <div class="container">
-        <div class="row">
+        <div class="about-row">
           <div class="about-col-2">
             <h1 class="sub-title centered">About Me</h1>
+            <!-- <svg
+              id="about-text"
+              class="centered-svg"
+              width="219"
+              height="49"
+              viewBox="0 0 219 49"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.54532 48.0001H0.63623L17.7271 1.4546H23.5453L40.6362 48.0001H34.7271L20.818 8.81824H20.4544L6.54532 48.0001ZM8.72714 29.8182H32.5453V34.8182H8.72714V29.8182Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path
+                d="M47.8862 48.0001V1.4546H64.159C67.4014 1.4546 70.0756 2.01521 72.1817 3.13642C74.2878 4.24248 75.8559 5.7349 76.8862 7.61369C77.9165 9.47733 78.4317 11.5455 78.4317 13.8182C78.4317 15.8182 78.0756 17.4698 77.3635 18.7728C76.6665 20.0758 75.7423 21.1061 74.5908 21.8637C73.4544 22.6213 72.2196 23.1819 70.8862 23.5455V24.0001C72.3105 24.091 73.7423 24.591 75.1817 25.5001C76.6211 26.4091 77.8256 27.7122 78.7953 29.4091C79.765 31.1061 80.2499 33.1819 80.2499 35.6364C80.2499 37.9698 79.7196 40.0682 78.659 41.9319C77.5984 43.7955 75.9241 45.2728 73.6362 46.3637C71.3484 47.4546 68.3711 48.0001 64.7044 48.0001H47.8862ZM53.5226 43.0001H64.7044C68.3862 43.0001 70.9999 42.2879 72.5453 40.8637C74.1059 39.4243 74.8862 37.6819 74.8862 35.6364C74.8862 34.0607 74.4847 32.6061 73.6817 31.2728C72.8787 29.9243 71.7347 28.8485 70.2499 28.0455C68.765 27.2273 67.0074 26.8182 64.9771 26.8182H53.5226V43.0001ZM53.5226 21.9091H63.9771C65.6741 21.9091 67.2044 21.5758 68.5681 20.9091C69.9468 20.2425 71.0378 19.3031 71.8408 18.091C72.659 16.8788 73.0681 15.4546 73.0681 13.8182C73.0681 11.7728 72.3559 10.0379 70.9317 8.61369C69.5075 7.1743 67.2499 6.4546 64.159 6.4546H53.5226V21.9091Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path
+                d="M128.784 24.7273C128.784 29.6364 127.898 33.8788 126.125 37.4546C124.352 41.0304 121.92 43.7879 118.829 45.7273C115.739 47.6667 112.208 48.6364 108.239 48.6364C104.269 48.6364 100.739 47.6667 97.6476 45.7273C94.5567 43.7879 92.1249 41.0304 90.3521 37.4546C88.5794 33.8788 87.6931 29.6364 87.6931 24.7273C87.6931 19.8182 88.5794 15.5758 90.3521 12.0001C92.1249 8.4243 94.5567 5.66672 97.6476 3.72733C100.739 1.78793 104.269 0.818237 108.239 0.818237C112.208 0.818237 115.739 1.78793 118.829 3.72733C121.92 5.66672 124.352 8.4243 126.125 12.0001C127.898 15.5758 128.784 19.8182 128.784 24.7273ZM123.329 24.7273C123.329 20.697 122.655 17.2955 121.307 14.5228C119.973 11.7501 118.163 9.65157 115.875 8.22733C113.602 6.80309 111.057 6.09097 108.239 6.09097C105.42 6.09097 102.867 6.80309 100.579 8.22733C98.3067 9.65157 96.4961 11.7501 95.1476 14.5228C93.8143 17.2955 93.1476 20.697 93.1476 24.7273C93.1476 28.7576 93.8143 32.1591 95.1476 34.9319C96.4961 37.7046 98.3067 39.8031 100.579 41.2273C102.867 42.6516 105.42 43.3637 108.239 43.3637C111.057 43.3637 113.602 42.6516 115.875 41.2273C118.163 39.8031 119.973 37.7046 121.307 34.9319C122.655 32.1591 123.329 28.7576 123.329 24.7273Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path
+                d="M168.807 1.4546H174.443V32.2728C174.443 35.4546 173.693 38.2955 172.193 40.7955C170.708 43.2804 168.61 45.2425 165.898 46.6819C163.185 48.1061 160.004 48.8182 156.352 48.8182C152.701 48.8182 149.519 48.1061 146.807 46.6819C144.095 45.2425 141.988 43.2804 140.488 40.7955C139.004 38.2955 138.261 35.4546 138.261 32.2728V1.4546H143.898V31.8182C143.898 34.091 144.398 36.1137 145.398 37.8864C146.398 39.644 147.822 41.0304 149.67 42.0455C151.534 43.0455 153.761 43.5455 156.352 43.5455C158.943 43.5455 161.17 43.0455 163.034 42.0455C164.898 41.0304 166.322 39.644 167.307 37.8864C168.307 36.1137 168.807 34.091 168.807 31.8182V1.4546Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path
+                d="M183.153 6.4546V1.4546H218.062V6.4546H203.426V48.0001H197.79V6.4546H183.153Z"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg> -->
 
-            <div class="about-card">
+            <div class="about-card about-hidden">
               <p>
                 I am a diligent student currently started my third year pursuing
                 a degree in Applied Mathematics and Informatics.
               </p>
             </div>
 
-            <div class="about-card">
+            <div class="about-card about-hidden">
               <p>
-                While I may not have prior work experience, <br />
-                I bring a strong work ethic, dedication, <br />
-                and a passion for learning.
+                While I may not have prior work experience, I bring a strong
+                work ethic, dedication, and a passion for learning.
               </p>
             </div>
           </div>
 
           <div class="about-col-1">
-            <img src="images/main_photo.jpg" />
+            <img
+              class="data-tilt"
+              data-tilt-scale="1.05"
+              src="images/main_photo.jpg"
+            />
           </div>
 
           <div class="about-col-2">
             <h1 class="sub-title centered">Hobbies</h1>
-
+            <!-- <svg
+              id="hobbies-text"
+              class="centered-svg"
+              width="267"
+              height="49"
+              viewBox="0 0 267 49"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.63623 48.0001V1.4546H6.27259V22.1819H31.0908V1.4546H36.7271V48.0001H31.0908V27.1819H6.27259V48.0001H0.63623Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path
+                d="M87.284 24.7273C87.284 29.6364 86.3976 33.8788 84.6249 37.4546C82.8521 41.0304 80.4203 43.7879 77.3294 45.7273C74.2385 47.6667 70.7082 48.6364 66.7385 48.6364C62.7688 48.6364 59.2385 47.6667 56.1476 45.7273C53.0567 43.7879 50.6249 41.0304 48.8521 37.4546C47.0794 33.8788 46.1931 29.6364 46.1931 24.7273C46.1931 19.8182 47.0794 15.5758 48.8521 12.0001C50.6249 8.4243 53.0567 5.66672 56.1476 3.72733C59.2385 1.78793 62.7688 0.818237 66.7385 0.818237C70.7082 0.818237 74.2385 1.78793 77.3294 3.72733C80.4203 5.66672 82.8521 8.4243 84.6249 12.0001C86.3976 15.5758 87.284 19.8182 87.284 24.7273ZM81.8294 24.7273C81.8294 20.697 81.1552 17.2955 79.8067 14.5228C78.4734 11.7501 76.6627 9.65157 74.3749 8.22733C72.1021 6.80309 69.5567 6.09097 66.7385 6.09097C63.9203 6.09097 61.3673 6.80309 59.0794 8.22733C56.8067 9.65157 54.9961 11.7501 53.6476 14.5228C52.3143 17.2955 51.6476 20.697 51.6476 24.7273C51.6476 28.7576 52.3143 32.1591 53.6476 34.9319C54.9961 37.7046 56.8067 39.8031 59.0794 41.2273C61.3673 42.6516 63.9203 43.3637 66.7385 43.3637C69.5567 43.3637 72.1021 42.6516 74.3749 41.2273C76.6627 39.8031 78.4734 37.7046 79.8067 34.9319C81.1552 32.1591 81.8294 28.7576 81.8294 24.7273Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path
+                d="M96.7612 48.0001V1.4546H113.034C116.276 1.4546 118.951 2.01521 121.057 3.13642C123.163 4.24248 124.731 5.7349 125.761 7.61369C126.792 9.47733 127.307 11.5455 127.307 13.8182C127.307 15.8182 126.951 17.4698 126.238 18.7728C125.542 20.0758 124.617 21.1061 123.466 21.8637C122.329 22.6213 121.095 23.1819 119.761 23.5455V24.0001C121.185 24.091 122.617 24.591 124.057 25.5001C125.496 26.4091 126.701 27.7122 127.67 29.4091C128.64 31.1061 129.125 33.1819 129.125 35.6364C129.125 37.9698 128.595 40.0682 127.534 41.9319C126.473 43.7955 124.799 45.2728 122.511 46.3637C120.223 47.4546 117.246 48.0001 113.579 48.0001H96.7612ZM102.398 43.0001H113.579C117.261 43.0001 119.875 42.2879 121.42 40.8637C122.981 39.4243 123.761 37.6819 123.761 35.6364C123.761 34.0607 123.36 32.6061 122.557 31.2728C121.754 29.9243 120.61 28.8485 119.125 28.0455C117.64 27.2273 115.882 26.8182 113.852 26.8182H102.398V43.0001ZM102.398 21.9091H112.852C114.549 21.9091 116.079 21.5758 117.443 20.9091C118.822 20.2425 119.913 19.3031 120.716 18.091C121.534 16.8788 121.943 15.4546 121.943 13.8182C121.943 11.7728 121.231 10.0379 119.807 8.61369C118.382 7.1743 116.125 6.4546 113.034 6.4546H102.398V21.9091Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path
+                d="M138.386 48.0001V1.4546H154.659C157.901 1.4546 160.576 2.01521 162.682 3.13642C164.788 4.24248 166.356 5.7349 167.386 7.61369C168.417 9.47733 168.932 11.5455 168.932 13.8182C168.932 15.8182 168.576 17.4698 167.863 18.7728C167.167 20.0758 166.242 21.1061 165.091 21.8637C163.954 22.6213 162.72 23.1819 161.386 23.5455V24.0001C162.81 24.091 164.242 24.591 165.682 25.5001C167.121 26.4091 168.326 27.7122 169.295 29.4091C170.265 31.1061 170.75 33.1819 170.75 35.6364C170.75 37.9698 170.22 40.0682 169.159 41.9319C168.098 43.7955 166.424 45.2728 164.136 46.3637C161.848 47.4546 158.871 48.0001 155.204 48.0001H138.386ZM144.023 43.0001H155.204C158.886 43.0001 161.5 42.2879 163.045 40.8637C164.606 39.4243 165.386 37.6819 165.386 35.6364C165.386 34.0607 164.985 32.6061 164.182 31.2728C163.379 29.9243 162.235 28.8485 160.75 28.0455C159.265 27.2273 157.507 26.8182 155.477 26.8182H144.023V43.0001ZM144.023 21.9091H154.477C156.174 21.9091 157.704 21.5758 159.068 20.9091C160.447 20.2425 161.538 19.3031 162.341 18.091C163.159 16.8788 163.568 15.4546 163.568 13.8182C163.568 11.7728 162.856 10.0379 161.432 8.61369C160.007 7.1743 157.75 6.4546 154.659 6.4546H144.023V21.9091Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path
+                d="M185.648 1.4546V48.0001H180.011V1.4546H185.648Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path
+                d="M196.949 48.0001V1.4546H225.04V6.4546H202.585V22.1819H223.585V27.1819H202.585V43.0001H225.403V48.0001H196.949Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path
+                d="M260.653 13.091C260.381 10.7879 259.275 9.00006 257.335 7.72733C255.396 6.4546 253.017 5.81824 250.199 5.81824C248.138 5.81824 246.335 6.15157 244.79 6.81824C243.259 7.4849 242.062 8.40157 241.199 9.56824C240.35 10.7349 239.926 12.0607 239.926 13.5455C239.926 14.7879 240.221 15.8561 240.812 16.7501C241.418 17.6288 242.191 18.3637 243.131 18.9546C244.07 19.5304 245.055 20.0076 246.085 20.3864C247.115 20.7501 248.062 21.0455 248.926 21.2728L253.653 22.5455C254.865 22.8637 256.214 23.3031 257.699 23.8637C259.199 24.4243 260.631 25.1894 261.994 26.1591C263.373 27.1137 264.509 28.341 265.403 29.841C266.297 31.341 266.744 33.1819 266.744 35.3637C266.744 37.8788 266.085 40.1516 264.767 42.1819C263.464 44.2122 261.555 45.8258 259.04 47.0228C256.54 48.2198 253.502 48.8182 249.926 48.8182C246.593 48.8182 243.706 48.2804 241.267 47.2046C238.843 46.1288 236.934 44.6288 235.54 42.7046C234.161 40.7804 233.381 38.5455 233.199 36.0001H239.017C239.168 37.7576 239.759 39.2122 240.79 40.3637C241.835 41.5001 243.153 42.3485 244.744 42.9091C246.35 43.4546 248.078 43.7273 249.926 43.7273C252.078 43.7273 254.009 43.3788 255.721 42.6819C257.434 41.9698 258.79 40.9849 259.79 39.7273C260.79 38.4546 261.29 36.9698 261.29 35.2728C261.29 33.7273 260.858 32.4698 259.994 31.5001C259.131 30.5304 257.994 29.7425 256.585 29.1364C255.176 28.5304 253.653 28.0001 252.017 27.5455L246.29 25.9091C242.653 24.8637 239.774 23.3713 237.653 21.4319C235.532 19.4925 234.471 16.9546 234.471 13.8182C234.471 11.2122 235.176 8.93945 236.585 7.00006C238.009 5.04551 239.918 3.53036 242.312 2.4546C244.721 1.36369 247.411 0.818237 250.381 0.818237C253.381 0.818237 256.047 1.35612 258.381 2.43187C260.714 3.49248 262.562 4.94702 263.926 6.79551C265.305 8.64399 266.032 10.7425 266.108 13.091H260.653Z"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+           -->
             <div class="about-card">
               <p>
-                I love Rubik's Cude speedsolving. My official average of 5 is
+                I love Rubik's Cube speedsolving. My official WCA average of 5
+                is
                 <span>13.27s.</span>
               </p>
+              <a
+                class="about-button"
+                href="https://www.worldcubeassociation.org/persons/2018PROT01"
+                target="_blank"
+              >
+                WCA
+              </a>
             </div>
 
             <div class="about-card">
@@ -101,6 +193,23 @@
                 I also love solving coding problems on <span>LeetCode</span> and
                 <span>Codewars</span>.
               </p>
+
+              <div class="hobbies-buttons">
+                <a
+                  class="about-button"
+                  href="https://leetcode.com/Rosaka/"
+                  target="_blank"
+                >
+                  LeetCode
+                </a>
+                <a
+                  class="about-button"
+                  href="https://www.codewars.com/users/Rosaka"
+                  target="_blank"
+                >
+                  Codewars
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -121,15 +230,17 @@
               </h2>
               <a>2018 - 2021</a>
             </div>
-            <div class="empty-space">empty space</div>
+            <!-- <div class="empty-space">empty space</div> -->
           </div>
+
           <div class="education-university">
             <div class="card-university">
               <h2>
                 <i class="fa-solid fa-building-columns"></i> Lviv Ivan Franko
                 National<br />
-                University Lyceum
+                University
               </h2>
+              <p>Faculty: Computer Science</p>
               <a>2021 - present</a>
             </div>
           </div>
@@ -142,9 +253,10 @@
     <div id="skills">
       <div class="container-skills">
         <h1 class="myskills-header">My skills</h1>
+
         <div class="my-hard-skills-container">
           <div class="my-skills-blob-wrapper">
-            <div class="my-skills-blob blob-hidden">
+            <div class="my-skills-blob blob-hidden hard-blob">
               <div class="hard-skills-blob-text">
                 <h2>Hard Skills</h2>
               </div>
@@ -194,7 +306,7 @@
           </ul>
 
           <div class="my-skills-blob-wrapper">
-            <div class="my-skills-blob blob-hidden">
+            <div class="my-skills-blob blob-hidden soft-blob">
               <div class="soft-skills-blob-text">
                 <h2>Soft Skills</h2>
               </div>
@@ -208,195 +320,109 @@
 
     <div id="projects">
       <h1 class="projects-title">Projects</h1>
+
       <div class="slide-container swiper">
         <div class="slide-content">
           <div class="card-wrapper swiper-wrapper">
             <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
+              <div class="card-video">
+                <div class="card-sidebar">
+                  <h2 class="project-name">
+                    Sea Battle Game <i class="fa-solid fa-anchor"></i>
+                  </h2>
+                  <p class="description">
+                    Simple OOP game written in Python<br />
+                    <span>Technologies:</span> Flask, HTML, CSS and JavaScript.
+                  </p>
 
-                <div class="card-image">
-                  <img src="images/logo.jpg" class="card-img" />
+                  <button class="projects-button">
+                    <i class="fa-brands fa-github"></i>View More
+                  </button>
                 </div>
-              </div>
-
-              <div class="card-content">
-                <h2 class="project-name">First project</h2>
-                <p class="description">
-                  the Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-
-                <button class="projects-button">View More</button>
+                <video autoplay loop muted>
+                  <source src="../videos/seabattlevideo.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
 
             <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
+              <div class="card-video">
+                <div class="card-sidebar">
+                  <h2 class="project-name">Personal Portfolio Website</h2>
+                  <p class="description">
+                    <span>Technologies:</span> HTML, CSS and JavaScript.
+                  </p>
 
-                <div class="card-image">
-                  <img src="images/logo.jpg" class="card-img" />
+                  <a
+                    class="projects-button"
+                    href="https://github.com/Nazarii14/Personal-Portfolio-Website"
+                  >
+                    <i class="fa-brands fa-github"></i>View More
+                  </a>
                 </div>
-              </div>
-
-              <div class="card-content">
-                <h2 class="project-name">First project</h2>
-                <p class="description">
-                  the Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-
-                <button class="projects-button">View More</button>
+                <video autoplay loop muted>
+                  <source src="./videos/websiteVideo.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
 
             <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
+              <div class="card-video">
+                <div class="card-sidebar">
+                  <h2 class="project-name">
+                    Path Finding Visualization tool
+                    <i class="fa-solid fa-sitemap"></i>
+                  </h2>
+                  <p class="description">
+                    Visualization Tool<br />
+                    <span>Technologies:</span> Flask, HTML, CSS and
+                    JavaScript.<br />
+                    <span>Algorithm:</span> A* (a star).
+                  </p>
 
-                <div class="card-image">
-                  <img src="images/logo.jpg" class="card-img" />
+                  <a
+                    class="projects-button"
+                    href="https://github.com/Nazarii14/Path-Finding-Visualization"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i>View More
+                  </a>
                 </div>
-              </div>
-
-              <div class="card-content">
-                <h2 class="project-name">First project</h2>
-                <p class="description">
-                  the Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-
-                <button class="projects-button">View More</button>
+                <video autoplay loop muted>
+                  <source
+                    src="../videos/pathfindingvideo.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
             </div>
 
             <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
+              <div class="card-video">
+                <div class="card-sidebar">
+                  <h2 class="project-name">Sorting Visualizer</h2>
+                  <p class="description">
+                    Visualization Tool<br />
+                    <span>Technologies:</span> Matplotlib module<br />
+                    <span>Algorithms:</span> bubble sort, gnome sort, insertion
+                    sort, cocktail shaker sort, heap sort, quick sort, selection
+                    sort
+                  </p>
 
-                <div class="card-image">
-                  <img src="images/logo.jpg" class="card-img" />
+                  <a
+                    class="projects-button"
+                    href="https://github.com/Nazarii14/Path-Finding-Visualization"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i>View More
+                  </a>
                 </div>
-              </div>
-
-              <div class="card-content">
-                <h2 class="project-name">First project</h2>
-                <p class="description">
-                  the Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-
-                <button class="projects-button">View More</button>
-              </div>
-            </div>
-
-            <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
-
-                <div class="card-image">
-                  <img src="images/logo.jpg" class="card-img" />
-                </div>
-              </div>
-
-              <div class="card-content">
-                <h2 class="project-name">First project</h2>
-                <p class="description">
-                  the Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-
-                <button class="projects-button">View More</button>
-              </div>
-            </div>
-
-            <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
-
-                <div class="card-image">
-                  <img src="images/logo.jpg" class="card-img" />
-                </div>
-              </div>
-
-              <div class="card-content">
-                <h2 class="project-name">First project</h2>
-                <p class="description">
-                  the Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-
-                <button class="projects-button">View More</button>
-              </div>
-            </div>
-            <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
-
-                <div class="card-image">
-                  <img src="images/logo.jpg" class="card-img" />
-                </div>
-              </div>
-
-              <div class="card-content">
-                <h2 class="project-name">First project</h2>
-                <p class="description">
-                  the Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-
-                <button class="projects-button">View More</button>
-              </div>
-            </div>
-
-            <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
-
-                <div class="card-image">
-                  <img src="images/logo.jpg" class="card-img" />
-                </div>
-              </div>
-
-              <div class="card-content">
-                <h2 class="project-name">First project</h2>
-                <p class="description">
-                  the Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-
-                <button class="projects-button">View More</button>
-              </div>
-            </div>
-
-            <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
-
-                <div class="card-image">
-                  <img src="images/logo.jpg" class="card-img" />
-                </div>
-              </div>
-
-              <div class="card-content">
-                <h2 class="project-name">First project</h2>
-                <p class="description">
-                  the Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-
-                <button class="projects-button">View More</button>
-              </div>
-            </div>
-
-            <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
-
-                <div class="card-image">
-                  <img src="images/logo.jpg" class="card-img" />
-                </div>
-              </div>
-
-              <div class="card-content">
-                <h2 class="project-name">First project</h2>
-                <p class="description">
-                  the Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-
-                <button class="projects-button">View More</button>
+                <video autoplay loop muted>
+                  <source
+                    src="../videos/sortvisualization.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
             </div>
           </div>
@@ -411,7 +437,7 @@
     <!-- ---------------------- contact ---------------------- -->
     <div id="contact">
       <div class="container">
-        <div class="row">
+        <div class="contact-row">
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
             <p><i class="fa-solid fa-envelope"></i>rosaka1429@gmail.com</p>
@@ -435,7 +461,7 @@
             <a
               href="/Nazarii Protskiv CV Resume v2.3.pdf"
               download
-              class="btn btn2"
+              class="btn btn2 download-btn"
               >Download CV</a
             >
           </div>
@@ -453,7 +479,7 @@
                 rows="6"
                 placeholder="Your message"
               ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
+              <button type="submit" class="btn">Submit</button>
             </form>
           </div>
         </div>
@@ -462,25 +488,6 @@
             <p>Copyright © Nazarii Protskiv</p>
       </div> -->
     </div>
-
-    <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-
-      function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
-        }
-
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
-        }
-
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
-    </script>
-
     <script>
       var sidemenu = document.getElementById("sidemenu");
 
