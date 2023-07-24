@@ -9,9 +9,9 @@
 }
 
 :root {
-    /* # */
     --main-color: #00fbff;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -31,25 +31,6 @@ body {
 
 .container {
     padding: 10px 10%;
-}
-
-
-/* section colors */
-
-.red {
-    background: #dd3f31;
-}
-
-.blue {
-    background: #3c31dd;
-}
-
-.purple {
-    background: #ee82ee;
-}
-
-.pink {
-    background: #ff0066;
 }
 
 
@@ -114,8 +95,8 @@ nav ul li a:hover::after {
 
 .main-blob {
     margin-top: 40px;
-    width: 550px;
-    height: 550px;
+    width: 500px;
+    height: 500px;
     justify-content: center;
     align-items: center;
     background-size: cover;
@@ -947,6 +928,39 @@ nav .fa-sharp, nav .fa-solid {
     display: none;
 }
 
+.to-top {
+    background: #262626;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color:#fff;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+    z-index: 2;
+}
+
+.to-top:hover {
+    box-shadow: 0 0 2px 2px #ababab;
+}
+
+.to-top:active {
+    background: #000000;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
 
 
 /* css for small screens */
@@ -969,7 +983,8 @@ nav .fa-sharp, nav .fa-solid {
     .my-hard-skills-container ul li {
         font-size: 35px;        
     }
-    .my-soft-skills-container ul li {
+    .my-soft-skills-container ul li,
+    .my-hard-skills-container ul li {
         font-size: 35px;
     }
     .sub-title {
@@ -985,11 +1000,23 @@ nav .fa-sharp, nav .fa-solid {
     .sub-title {
         font-size: 30px;
     }
-    .about-col-1 img {
-        margin: 15px auto 15px;
+    .sub-title.centered {
+        font-size: 100px;
     }
-    .about-card p {
-        font-size: 20px;
+    .about-row {
+        display: flex;
+        flex-direction: row;
+    }
+    .about-col-1 img {
+        display: none;
+    }
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-card p, 
+    .about-card a {
+        font-size: 35px;
     }
     #about-text {
         width: 550px;
@@ -1005,6 +1032,9 @@ nav .fa-sharp, nav .fa-solid {
     .header-text h1 {
         font-size: 45px;
     }
+    .sub-title.centered {
+        font-size: 90px;
+    }
     #about-text {
         width: 450px;
         height: 120px;
@@ -1012,17 +1042,54 @@ nav .fa-sharp, nav .fa-solid {
 }
 
 @media only screen and (max-width: 1315px) {
+    .sub-title.centered {
+        font-size: 85px;
+    }
+
+    #about-text {
+        width: 550px;
+        height: 200px;
+    }
+
     .main-blob {
         width: 450px;
         height: 450px;
     }
+    .my-soft-skills-container ul li,
+    .my-hard-skills-container ul li {
+        font-size: 30px;
+    }
+
     #about-text {
         width: 200px;
         height: 49px;
     }
 }
 
+@media only screen and (max-width: 1240px) {
+    .sub-title.centered {
+        font-size: 75px;
+    }
+    .about-card p, 
+    .about-card a {
+        font-size: 35px;
+    }
+    
+    .my-skills-blob {
+        width: 500px;
+        height: 500px;
+    }
+    .my-soft-skills-container ul li,
+    .my-hard-skills-container ul li {
+        font-size: 28px;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
+    .sub-title.centered {
+        font-size: 65px;
+    }
+
     .main-blob {
         width: 400px;
         height: 400px;
@@ -1042,6 +1109,32 @@ nav .fa-sharp, nav .fa-solid {
     .header-text h1 {
         font-size: 42px;
     }
+
+    .sub-title.centered {
+        font-size: 65px;
+    }
+
+    .about-row {
+        display: flex;
+    }
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .my-skills-blob {
+        width: 470px;
+        height: 470px;
+    }
+    .my-soft-skills-container ul li,
+    .my-hard-skills-container ul li {
+        font-size: 25px;
+    }
     #about-text {
         width: 160px;
         height: 40px;
@@ -1049,7 +1142,25 @@ nav .fa-sharp, nav .fa-solid {
     .about-col-2 h1 {
         font-size: 10px;
     }
+}
 
+@media only screen and (max-width: 1000px) {
+    .main-blob {
+        width: 320px;
+        height: 320px;
+    }
+    .header-text h1 {
+        font-size: 35px;
+    }
+
+    .my-skills-blob {
+        width: 430px;
+        height: 430px;
+    }
+    .my-soft-skills-container ul li,
+    .my-hard-skills-container ul li {
+        font-size: 23px;
+    }
 }
 
 @media only screen and (max-width: 970px) {
@@ -1095,22 +1206,21 @@ nav .fa-sharp, nav .fa-solid {
     }
 }
 
-@media only screen and (max-width: 1000px) {
-    .main-blob {
-        width: 320px;
-        height: 320px;
-    }
-    .header-text h1 {
-        font-size: 35px;
-    }
-}
-
 @media only screen and (max-width: 950px) {
     .main-blob {
         width: 320px;
         height: 320px;
     }
+    .my-skills-blob {
+        width: 400px;
+        height: 400px;
+    }
+    .my-soft-skills-container ul li,
+    .my-hard-skills-container ul li {
+        font-size: 21px;
+    }
 }
+
 
 @media only screen and (max-width: 912px) {
     .main-blob {
@@ -1122,21 +1232,6 @@ nav .fa-sharp, nav .fa-solid {
     }
     .header-text h1 {
         font-size: 20px;
-    }
-    .about-row {
-        display: block;
-        /* flex-direction: column; */
-    }
-    .about-col-1, .about-col-2 {
-        flex-basis: 100%;
-    }
-
-    .about-col-1 {
-        margin-bottom: 30px;
-    }
-
-    .about-col-2 {
-        font-size: 14px;
     }
 }
 
@@ -1160,7 +1255,12 @@ nav .fa-sharp, nav .fa-solid {
     .header-text h1 {
         font-size: 30px;
     }
+    .my-skills-blob {
+        width: 370px;
+        height: 370px;
+    }
 }
+
 
 @media only screen and (max-width: 912px) and (max-height: 1368px) {
     .about-row {
@@ -1176,6 +1276,10 @@ nav .fa-sharp, nav .fa-solid {
 }
 
 @media only screen and (max-width: 820px){
+    .my-skills-blob {
+        width: 320px;
+        height: 320px;
+    }
     .about-row {
         display: flex;
         flex-direction: column;
@@ -1189,8 +1293,9 @@ nav .fa-sharp, nav .fa-solid {
     .contact-left p {
         font-size: 40px;
     }
-    .contact-left.social-icons > i {
-        font-size: 40px;
+    .contact-left p i {
+        font-size: 35px;
+        margin-right: 25px;
     }
     .download-btn {
         font-size: 40px;
@@ -1229,13 +1334,12 @@ nav .fa-sharp, nav .fa-solid {
 }
 
 @media only screen and (max-width: 768px) {
-}
-
-@media only screen and (max-width: 748px) {
-    .sub-title {
-        font-size: 75px;
+    .my-skills-blob {
+        width: 300px;
+        height: 300px;
     }
 }
+
 
 @media only screen and (max-width: 710px) {
     .main-blob {
@@ -1250,9 +1354,21 @@ nav .fa-sharp, nav .fa-solid {
     }
 }
 
+@media only screen and (max-width: 742px) {
+    .sub-title {
+        font-size: 70px;
+    }
+}
+
 @media only screen and (max-width: 700px) {
     .contact-left, .contact-right {
         flex-basis: 100%;
+    }
+    .sub-title {
+        font-size: ;
+    }
+    .contact-left p {
+        font-size: 35px;
     }
 }
 
@@ -1266,6 +1382,16 @@ nav .fa-sharp, nav .fa-solid {
     }
     .header-text h1 {
         font-size: 55px;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .contact-left p {
+        font-size: 30px;
+    }
+    .contact-left p i {
+        font-size: 30px;
+        margin-right: 20px;
     }
 }
 
@@ -1341,6 +1467,15 @@ nav .fa-sharp, nav .fa-solid {
     .header-text h1 {
         font-size: 45px;
     }
+    .contact-left p {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .sub-title {
+        font-size: 60px;
+    }
 }
 
 @media only screen and (max-width: 510px) {
@@ -1356,6 +1491,21 @@ nav .fa-sharp, nav .fa-solid {
     }
 }
 
+@media only screen and (max-width: 450px) {
+    .sub-title {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .contact-left p {
+        font-size: 20px;
+    }
+    .contact-left p i {
+        font-size: 25px;
+        margin-right: 15px;
+    }
+}
 @media only screen and (max-width: 415px) {
     .main-blob {
         width: 300px;
@@ -1405,6 +1555,12 @@ nav .fa-sharp, nav .fa-solid {
     }
     .header-text h1 {
         font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .sub-title {
+        font-size: 40px;
     }
 }
 

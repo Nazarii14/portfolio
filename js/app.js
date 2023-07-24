@@ -86,7 +86,7 @@ const hobbiesText = document.querySelectorAll('#hobbies-text path')
 //     },
 //   });
 
-  var swiper = new Swiper(".slide-content", {
+  var swiper = new Swiper(".slide-content.first-slider", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -94,7 +94,7 @@ const hobbiesText = document.querySelectorAll('#hobbies-text path')
       disableOnInteraction: false,
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper-pagination.first-pagination",
       clickable: true,
     },
     navigation: {
@@ -103,6 +103,16 @@ const hobbiesText = document.querySelectorAll('#hobbies-text path')
     },
   });
 
+  // var secondSwiper = new Swiper(".slide-content.second-slider", {
+  //   direction: "vertical",
+  //   slidesPerView: 1,
+  //   spaceBetween: 30,
+  //   mousewheel: true,
+  //   pagination: {
+  //     el: ".swiper-pagination.second-pagination",
+  //     clickable: true,
+  //   },
+  // });
 
 // tilt cards
 // VanillaTilt.init(document.querySelector(".about-card"), {
@@ -136,3 +146,16 @@ VanillaTilt.init(document.querySelector(".btn.btn2"), {
   max: 25,    // Max tilt rotation (in degrees)
   speed: 5000 // Transition speed
 });
+
+
+// to top button
+const toTopButton = document.querySelector(".to-top");
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 100) {
+    toTopButton.classList.add("active")
+  }
+  else {
+    toTopButton.classList.remove("active")
+  }
+})
