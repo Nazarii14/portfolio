@@ -921,7 +921,7 @@ input:checked + .slider:before {
     border: 2px solid var(--main-color);
     font-weight: 600;
     border-radius: 6px;
-    margin: 50px auto;
+    margin: 20px auto 50px;
     width: fit-content;
     padding: 14px 50px;
     text-decoration: none;
@@ -1541,12 +1541,23 @@ nav .fa-sharp, nav .fa-solid {
     .header-text h1 {
         font-size: 55px;
     }
+    .education-header,
+    .myskills-header {
+        font-size: 55px;
+    }
+    .card-lyceum h2,
+    .card-university h2 {
+        font-size: 20px;
+    }
+    .about-card {
+        font-size: 10px;
+    }
     nav .fa-sharp, nav .fa-solid {
         display: block;
         font-size: 25px;
     }
     nav ul {
-        background: var(--main-color);
+        background: #4338e3;
         position: fixed;
         top: 0;
         right: -200px;
@@ -1602,8 +1613,31 @@ nav .fa-sharp, nav .fa-solid {
     .header-text h1 {
         font-size: 45px;
     }
+    .sub-title.centered {
+        font-size: 38px;
+    }
+    .about-card p {
+        font-size: 17px;
+    }
+    .about-card a {
+        font-size: 20px;
+    }
+    .my-skills-blob {
+        width: 270px;
+        height: 270px;
+    }
+    .my-hard-skills-container ul li,
+    .my-soft-skills-container ul li {
+        font-size: 15px;
+
+    }
     .contact-left p {
-        font-size: 25px;
+        font-size: 20px;
+    }
+    .contact-right button,
+    .download-btn {
+        font-size: 20px;
+        padding: 20px;
     }
 }
 
@@ -1614,6 +1648,9 @@ nav .fa-sharp, nav .fa-solid {
 }
 
 @media only screen and (max-width: 510px) {
+    .container {
+        padding: 10px 5%;
+    }
     .main-blob {
         width: 370px;
         height: 370px;
@@ -1639,6 +1676,11 @@ nav .fa-sharp, nav .fa-solid {
     .contact-left p i {
         font-size: 25px;
         margin-right: 15px;
+    }
+    .education-header,
+    .myskills-header,
+    .projects-title {
+        font-size: 45px;
     }
 }
 @media only screen and (max-width: 415px) {
