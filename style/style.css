@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
 
 * {
     margin: 0;
@@ -272,6 +274,7 @@ input:checked + .slider:before {
     margin: 10px;
     padding: 20px;
     color: var(--white-color);
+    font-size: 400;
     background: var(--grey-color);
     border-radius: 10px;
     transition: box-shadow 0.25s ease-in-out;
@@ -609,6 +612,7 @@ input:checked + .slider:before {
     list-style: none;
     background: var(--grey-color);
     border-radius: 15px;
+    font-weight: 400;
     margin: 20px;
     padding: 30px;
     transition: transform, background, color 0.5s, 0.5s, 0.55s;
@@ -833,8 +837,9 @@ input:checked + .slider:before {
 }
 
 .description {
+    font-weight: 100;
     font-size: 1rem;
-    color: var(--white-color);   
+    color: white;   
 }
 
 .description span {
@@ -849,6 +854,7 @@ input:checked + .slider:before {
     background-color: var(--black-color);
     border-radius: 6px;
     margin-top: 10px;
+    font-weight: 100;
     cursor: pointer;
     transition: all 0.3 ease;
 }
@@ -863,9 +869,6 @@ input:checked + .slider:before {
 }
 
 /* contact */
-#contact {
-    /* background-image: url(./low-poly-grid-haikei.svg) */
-}
 .contact-row {
     height: fit-content;
     display: flex;
@@ -883,6 +886,7 @@ input:checked + .slider:before {
 }
 
 .contact-left p {
+    font-weight: 400;
      margin-top: 30px;
 }
 
@@ -959,6 +963,12 @@ input:checked + .slider:before {
     width: 100%;
 }
 
+form input::placeholder, 
+form textarea::placeholder {
+    font-weight: 100;
+    color: white;
+}
+
 form input, form textarea {
     width: 100%;
     border: 0;
@@ -966,9 +976,12 @@ form input, form textarea {
     background: var(--grey-color);
     padding: 15px;
     margin: 15px 0;
-    color: var(--white-color);
+    color: white;
     font-size: 18px;
     border-radius: 6px;
+}
+textarea {
+    resize: none;
 }
 
 form .btn2 {
@@ -1027,6 +1040,14 @@ nav .fa-sharp, nav .fa-solid {
     opacity: 1;
 }
 
+
+#msg {
+    color: #61b752;
+    margin-top: -40px;
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+}
 
 /* css for small screens */
 @media only screen and (max-width: 1500px) {
