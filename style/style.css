@@ -925,6 +925,7 @@ input:checked + .slider:before {
 }
 
 .btn:hover {
+    cursor: pointer;
     background: var(--main-color);
     color: var(--black-color);
 }
