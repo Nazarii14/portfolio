@@ -64,61 +64,6 @@ hiddenBlobs.forEach((element) => blobObserver.observe(element));
 const aboutText = document.querySelectorAll('#about-text path')
 const hobbiesText = document.querySelectorAll('#hobbies-text path')
 
-// for (let i = 0; i < aboutText.length; i++) {
-//   console.log(`Letter ${i} is ${aboutText[i].getTotalLength()}`);
-// }
-
-
-// var swiper = new Swiper(".slide-content", {
-//     effect: "coverflow",
-//     grabCursor: true,
-//     centeredSlides: true,
-//     slidesPerView: "auto",
-//     coverflowEffect: {
-//       rotate: 50,
-//       stretch: 0,
-//       depth: 100,
-//       modifier: 1,
-//       slideShadows: true,
-//     },
-//     pagination: {
-//       el: ".swiper-pagination",
-//     },
-//   });
-
-  var swiper = new Swiper(".slide-content.first-slider", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 7500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination.first-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-  // var secondSwiper = new Swiper(".slide-content.second-slider", {
-  //   direction: "vertical",
-  //   slidesPerView: 1,
-  //   spaceBetween: 30,
-  //   mousewheel: true,
-  //   pagination: {
-  //     el: ".swiper-pagination.second-pagination",
-  //     clickable: true,
-  //   },
-  // });
-
-// tilt cards
-// VanillaTilt.init(document.querySelector(".about-card"), {
-//   max: 25,
-//   speed: 400
-// });
 
 VanillaTilt.init(document.querySelector(".data-tilt"), {
   scale: 1.05, // Tilt intensity
@@ -139,13 +84,18 @@ VanillaTilt.init(document.querySelector(".education-university"), {
   speed: 1000 // Transition speed
 });
 
-
-
 VanillaTilt.init(document.querySelector(".btn.btn2"), {
   scale: 1.15, // Tilt intensity
   max: 25,    // Max tilt rotation (in degrees)
   speed: 5000 // Transition speed
 });
+
+VanillaTilt.init(document.querySelector(".to-top"), {
+  scale: 1.15, // Tilt intensity
+  max: 25,    // Max tilt rotation (in degrees)
+  speed: 1000 // Transition speed
+});
+
 
 
 // to top button
@@ -165,14 +115,20 @@ const toggle = document.querySelector('.switch input[type="checkbox"]');
 
 function toggleTheme() {
   if (toggle.checked) {
+    transition()
     updateCSSVariables("#00fbff", "#ffffff", "#000000", "#626262");
-
-    // Switch to dark theme
-  } else {
-    // Switch to light theme
+  } 
+  else {
+    transition()
     updateCSSVariables("#00fbff", "#000000", "#ffffff", "#262626");
-
   }
+}
+
+let transition = () => {
+  document.documentElement.classList.add('transition');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('transition');
+  }, 1000)
 }
 
 function updateCSSVariables(mainColor, blackColor, whiteColor, greyColor) {

@@ -109,7 +109,7 @@
             <div class="about-card about-hidden">
               <p>
                 I am a diligent student currently started my third year pursuing
-                a degree in Applied Mathematics and Informatics.
+                a degree in <span>Computer Science</span>.
               </p>
             </div>
 
@@ -179,23 +179,33 @@
            -->
             <div class="about-card">
               <p>
-                I love Rubik's Cube speedsolving. My official WCA average of 5
-                is
-                <span>13.27s.</span>
+                I love Rubik's Cube speedsolving. <br />My recorded time for the
+                3x3 single solve stands at <span>9.68s</span>, with an average
+                of <span>11.04s</span> over five solves.
               </p>
-              <a
-                class="about-button"
-                href="https://www.worldcubeassociation.org/persons/2018PROT01"
-                target="_blank"
-              >
-                WCA
-              </a>
+
+              <div class="speedcuding-buttons">
+                <a
+                  class="about-button"
+                  href="https://www.worldcubeassociation.org/persons/2018PROT01"
+                  target="_blank"
+                >
+                  WCA
+                </a>
+                <a
+                  class="about-button"
+                  href="https://www.youtube.com/watch?v=Q3jORCiOIkU"
+                  target="_blank"
+                >
+                  Youtube
+                </a>
+              </div>
             </div>
 
             <div class="about-card">
               <p>
-                I also love solving coding problems on <span>LeetCode</span> and
-                <span>Codewars</span>.
+                I also have an affinity for tackling coding challenges on
+                <span>LeetCode</span> and <span>Codewars</span>.
               </p>
 
               <div class="hobbies-buttons">
@@ -325,10 +335,10 @@
     <div id="projects">
       <h1 class="projects-title">Projects</h1>
 
-      <div class="slide-container swiper">
-        <div class="slide-content first-slider">
-          <div class="card-wrapper swiper-wrapper">
-            <div class="card swiper-slide">
+      <div class="slide-container">
+        <div class="slide-content">
+          <div class="card-wrapper">
+            <div class="card">
               <div class="card-video">
                 <div class="card-sidebar">
                   <h2 class="project-name">
@@ -339,9 +349,13 @@
                     <span>Technologies:</span> Flask, HTML, CSS and JavaScript.
                   </p>
 
-                  <button class="projects-button">
+                  <a
+                    class="projects-button"
+                    target="_blank"
+                    href="https://github.com/Nazarii14/Sea-Battle"
+                  >
                     <i class="fa-brands fa-github"></i>View More
-                  </button>
+                  </a>
                 </div>
                 <video autoplay loop muted>
                   <source src="../videos/seabattlevideo.mp4" type="video/mp4" />
@@ -349,7 +363,7 @@
               </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card">
               <div class="card-video">
                 <div class="card-sidebar">
                   <h2 class="project-name">Personal Portfolio Website</h2>
@@ -359,18 +373,19 @@
 
                   <a
                     class="projects-button"
+                    target="_blank"
                     href="https://github.com/Nazarii14/Personal-Portfolio-Website"
                   >
                     <i class="fa-brands fa-github"></i>View More
                   </a>
                 </div>
                 <video autoplay loop muted>
-                  <source src="./videos/websiteVideo.mp4" type="video/mp4" />
+                  <source src="./videos/website-video.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card">
               <div class="card-video">
                 <div class="card-sidebar">
                   <h2 class="project-name">
@@ -379,9 +394,8 @@
                   </h2>
                   <p class="description">
                     Visualization Tool<br />
-                    <span>Technologies:</span> Flask, HTML, CSS and
-                    JavaScript.<br />
-                    <span>Algorithm:</span> A* (a star).
+                    <span>Technologies: </span>PyGame<br />
+                    <span>Algorithm:</span> A*.
                   </p>
 
                   <a
@@ -401,7 +415,7 @@
               </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card">
               <div class="card-video">
                 <div class="card-sidebar">
                   <h2 class="project-name">Sorting Visualizer</h2>
@@ -423,129 +437,15 @@
                 </div>
                 <video autoplay loop muted>
                   <source
-                    src="../videos/sortvisualization.mp4"
+                    src="../videos/sortingvisualizationvideo.mp4"
                     type="video/mp4"
                   />
                 </video>
               </div>
             </div>
           </div>
-
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination first-pagination"></div>
         </div>
       </div>
-
-      <!-- <div class="slide-container mySwiper">
-        <div class="slide-content second-slider">
-          <div class="card-wrapper swiper-wrapper">
-            <div class="card swiper-slide">
-              <div class="card-video">
-                <div class="card-sidebar">
-                  <h2 class="project-name">
-                    Sea Battle Game <i class="fa-solid fa-anchor"></i>
-                  </h2>
-                  <p class="description">
-                    Simple OOP game written in Python<br />
-                    <span>Technologies:</span> Flask, HTML, CSS and JavaScript.
-                  </p>
-
-                  <button class="projects-button">
-                    <i class="fa-brands fa-github"></i>View More
-                  </button>
-                </div>
-                <video autoplay loop muted>
-                  <source src="../videos/seabattlevideo.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-
-            <div class="card swiper-slide">
-              <div class="card-video">
-                <div class="card-sidebar">
-                  <h2 class="project-name">Personal Portfolio Website</h2>
-                  <p class="description">
-                    <span>Technologies:</span> HTML, CSS and JavaScript.
-                  </p>
-
-                  <a
-                    class="projects-button"
-                    href="https://github.com/Nazarii14/Personal-Portfolio-Website"
-                  >
-                    <i class="fa-brands fa-github"></i>View More
-                  </a>
-                </div>
-                <video autoplay loop muted>
-                  <source src="./videos/websiteVideo.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-
-            <div class="card swiper-slide">
-              <div class="card-video">
-                <div class="card-sidebar">
-                  <h2 class="project-name">
-                    Path Finding Visualization tool
-                    <i class="fa-solid fa-sitemap"></i>
-                  </h2>
-                  <p class="description">
-                    Visualization Tool<br />
-                    <span>Technologies:</span> Flask, HTML, CSS and
-                    JavaScript.<br />
-                    <span>Algorithm:</span> A* (a star).
-                  </p>
-
-                  <a
-                    class="projects-button"
-                    href="https://github.com/Nazarii14/Path-Finding-Visualization"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-github"></i>View More
-                  </a>
-                </div>
-                <video autoplay loop muted>
-                  <source
-                    src="../videos/pathfindingvideo.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-            </div>
-
-            <div class="card swiper-slide">
-              <div class="card-video">
-                <div class="card-sidebar">
-                  <h2 class="project-name">Sorting Visualizer</h2>
-                  <p class="description">
-                    Visualization Tool<br />
-                    <span>Technologies:</span> Matplotlib module<br />
-                    <span>Algorithms:</span> bubble sort, gnome sort, insertion
-                    sort, cocktail shaker sort, heap sort, quick sort, selection
-                    sort
-                  </p>
-
-                  <a
-                    class="projects-button"
-                    href="https://github.com/Nazarii14/Path-Finding-Visualization"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-github"></i>View More
-                  </a>
-                </div>
-                <video autoplay loop muted>
-                  <source
-                    src="../videos/sortvisualization.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-pagination second-pagination"></div>
-        </div>
-      </div> -->
     </div>
 
     <!-- ---------------------- contact ---------------------- -->
@@ -576,10 +476,10 @@
               ></a>
             </div>
             <a
-              href="/Nazarii Protskiv CV Resume v2.3.pdf"
+              href="/Nazarii Protskiv CV Resume.pdf"
               download
               class="btn btn2 download-btn"
-              >Download CV</a
+              ><div class="download-cv-text">Download CV</div></a
             >
           </div>
           <div class="contact-right">
@@ -608,7 +508,13 @@
     </div>
 
     <!-- to top button -->
-    <a href="#header" class="to-top">
+    <a
+      href="#header"
+      class="to-top"
+      data-tilt
+      data-tilt-glare
+      data-tilt-max-glare="0.8"
+    >
       <i class="fa-solid fa-arrow-up"></i>
     </a>
 
