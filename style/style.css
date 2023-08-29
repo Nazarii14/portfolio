@@ -28,10 +28,9 @@ body {
 
 #header {
     width: 100%;
-    height: 100vh;
     background-color: var(--black-color);
-    background-size:cover;
-    background: position 10px;
+    background-size: cover;
+    background-position: 10px;
 }
 
 .container {
@@ -57,7 +56,6 @@ nav h2 {
     width: 140px;
 }
 
-/* nav bar */
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -85,6 +83,7 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
+
 
 /* on/off button */
 
@@ -175,7 +174,7 @@ input:checked + .slider:before {
     background-size: cover;
     box-shadow: 0px 0px 15px 15px var(--main-color);
     background-position: center center;
-    background-image: url("../images/photo_2022-06-23_00-55-42.jpg");
+    background-image: url("../images/main-portrait_1.jpg");
     animation: animate 10s ease-in-out infinite;
     transition: all 5s ease-in-out;
 }
@@ -296,84 +295,6 @@ input:checked + .slider:before {
     color: var(--white-color);
 }
 
-.centered-svg {
-    display: block;
-    margin: 20px auto 30px;
-}
-
-#hobbies-text path:nth-child(1) {
-    stroke-dasharray: 300px;
-    stroke-dashoffset: 300px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-#hobbies-text path:nth-child(2) {
-    stroke-dasharray: 249px;
-    stroke-dashoffset: 249px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-#hobbies-text path:nth-child(3) {
-    stroke-dasharray: 284px;
-    stroke-dashoffset: 284px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-#hobbies-text path:nth-child(4) {
-    stroke-dasharray: 284px;
-    stroke-dashoffset: 284px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-#hobbies-text path:nth-child(5) {
-    stroke-dasharray: 154px;
-    stroke-dashoffset: 154px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-#hobbies-text path:nth-child(6) {
-    stroke-dasharray: 290px;
-    stroke-dashoffset: 290px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-#hobbies-text path:nth-child(7) {
-    stroke-dasharray: 290px;
-    stroke-dashoffset: 290px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-
-@keyframes about-text-animation {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-#about-text path:nth-child(1) {
-    stroke-dasharray: 260px;
-    stroke-dashoffset: 260px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-#about-text path:nth-child(2) {
-    stroke-dasharray: 284px;
-    stroke-dashoffset: 284px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-#about-text path:nth-child(3) {
-    stroke-dasharray: 249px;
-    stroke-dashoffset: 249px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-#about-text path:nth-child(4) {
-    stroke-dasharray: 228px;
-    stroke-dashoffset: 228px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-#about-text path:nth-child(5) {
-    stroke-dasharray: 163px;
-    stroke-dashoffset: 163px;
-    animation: about-text-animation 4s ease-in-out forwards;
-}
-
-.about-text path, .hobbies-text path {
-    filter: blur(5px);
-    transform: translateY(100%);
-    transition: transform 1.3s, filter 1.3s, opacity 1.3s;
-}
 .show-about-hobbies-text {
     filter: blur(0);
     transform: translateY(0);
@@ -480,65 +401,41 @@ input:checked + .slider:before {
     margin-bottom: 10px;
 }
 
-.education-lyceum {
+.education-lyceum,
+.education-university {
     color: white;
-    background: url(../svg/low-poly-grid-haikei.svg);
     background-repeat: no-repeat;
     background-size: cover;
     transform-style: preserve-3d;
-    transform: perspective(10px);
+    transform: perspective(1000px);
     flex-direction: row;
     display: flex;
     margin-bottom: 40px;
 }
 
-.education-lyceum h2 {
-    transform: translateZ(20px);
+.education-lyceum {
+    background-image: url(../svg/low-poly-grid-haikei.svg);
 }
-
 .education-university {
-    color: white;
     background-image: url(../svg/stacked-waves-haikei.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform-style: preserve-3d;
-    transform: perspective(10px);
-    flex-direction: row;
-    display: flex;
-}
-.education-university:hover {
-    box-shadow: 0px 0px 3px 3px var(--white-color);
 }
 
-.education-university h2 {
-    transform: translateZ(20px);
+.education-lyceum:hover,
+.education-university:hover {
+    box-shadow: 0px 0px 10px 10px var(--white-color);
 }
 
 .empty-space {
     display: none;
 }
 
-.card-lyceum {
-    margin-bottom: 50px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
+.card-lyceum,
 .card-university {
     margin-bottom: 50px;
     padding: 20px;
+    padding-left: 55px;
     border-radius: 10px;
-}
-
-.education-lyceum:hover {
-    box-shadow: 0px 0px 3px 3px var(--white-color);
-}
-
-.card-lyceum h2 i,
-.card-university h2 i {
-    font-size: 20px;
-    margin-right: 10px;
-    color: white;
+    transform: translateZ(55px);
 }
 
 .card-lyceum h2,
@@ -546,12 +443,21 @@ input:checked + .slider:before {
     flex-basis: 35%;
     margin: 10px;
     margin-bottom: 50px;
+    font-size: 40px;
 }
 
-.card-lyceum a {
+.card-lyceum h2 i,
+.card-university h2 i {
+    font-size: 40px;
+    margin-right: 10px;
+    color: white;
+}
+
+.card-lyceum a,
+.card-university a {
     padding-bottom: 10px;
     margin: 10px;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 600;
     color: white;
 }
@@ -561,17 +467,6 @@ input:checked + .slider:before {
     font-weight: 600;
     color: white;
 }
-
-.card-university a {
-    padding-bottom: 10px;
-    margin: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
-}
-
-
-
 
 
 /* skills */
@@ -645,9 +540,6 @@ input:checked + .slider:before {
     filter: blur(0);
     transform: translateX(0);
 }
-
-
-
 
 .myskills-header {
     text-align: center;
@@ -765,9 +657,6 @@ input:checked + .slider:before {
     transform: translateY(-10px);
 }
 
-
-
-
 /* my skills blobs */
 .my-skills-blob {
     opacity: 0;
@@ -793,7 +682,7 @@ input:checked + .slider:before {
 .slide-container {
     width: 95%;
     height: 50%;
-
+    overflow-x: hidden;
     border-radius: 25px;
     margin: 0 auto;
     margin-bottom: 40px;
@@ -809,7 +698,6 @@ input:checked + .slider:before {
 
 .card-video {
     display: flex;
-    flex-direction: row;
     background: var(--grey-color);
     border-radius: 10px;
     margin: 10px auto;
@@ -857,24 +745,44 @@ input:checked + .slider:before {
 .projects-button {
     display: inline-block;
     border: none;
-    color: var(--white-color);
-    padding: 8px 16px;
+    color: #ffffff80;
+    padding: 10px;
     background-color: var(--black-color);
-    border-radius: 6px;
-    margin-top: 10px;
+    border-radius: 40px;
+    margin: 15px;
     font-weight: 100;
     cursor: pointer;
-    font-size: 20px;
-    transition: all 0.3 ease;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+    overflow: hidden;
 }
 
-.projects-button i {
-    margin-right: 8px;
-    font-size: 20px;
-}
+/* .projects-button:before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    background-color: #6685ea;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    transition: 1s, left 0s, top 0s;
+    z-index: -1;
+} */
+
+/* .projects-button:hover:before {
+    width: 150px;
+    height: 150px;
+} */
 
 .projects-button:hover {
-    box-shadow: 2px 2px 0px 0px #828282;
+    color:#ffffff;
+}
+.projects-button i {
+    margin-right: 8px;
+    font-size: 15px;
 }
 
 /* contact */
@@ -957,20 +865,11 @@ input:checked + .slider:before {
 
 .download-btn:hover {
     border: 2px solid var(--main-color);
-    animation: download-button-animation 0.1s ease infinite;
+    /* animation: download-button-animation 0.1s ease infinite; */
 }
 
 .download-cv-text {
     transform: translateZ(20px);
-}
-
-@keyframes download-button-animation {
-    /* 0%, 100% {
-        color: #000000;
-    }
-    50% {
-        color: var(--main-color);
-    } */
 }
 
 .contact-right form {
@@ -994,6 +893,7 @@ form input, form textarea {
     font-size: 18px;
     border-radius: 6px;
 }
+
 textarea {
     resize: none;
 }
@@ -1054,6 +954,14 @@ nav .fa-sharp, nav .fa-solid {
     opacity: 1;
 }
 
+.progress {
+    width: 0;
+    height: 2px;
+    background: #00fbff;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
 
 #msg {
     color: #61b752;
@@ -1063,6 +971,20 @@ nav .fa-sharp, nav .fa-solid {
     display: block;
 }
 
+/* progress bar */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #04AA6D;
+    width: 0%;
+}
+
+
 /* css for small screens */
 @media only screen and (max-width: 1500px) {
     .main-blob {
@@ -1070,22 +992,17 @@ nav .fa-sharp, nav .fa-solid {
         height: 550px;
     }
     .my-skills-blob {
-        width: 650px;
-        height: 650px;
+        width: 470px;
+        height: 470px;
         margin: 25px auto 25px;
     }
-    .my-hard-skills-container {
-        flex-direction: column;
-    }
-    .my-soft-skills-container {
-        flex-direction: column-reverse;
-    }
+    
     .my-hard-skills-container ul li {
-        font-size: 35px;        
+        font-size: 15px;        
     }
     .my-soft-skills-container ul li,
     .my-hard-skills-container ul li {
-        font-size: 35px;
+        font-size: 15px;
     }
     .sub-title {
         font-size: 40px;
@@ -1094,33 +1011,27 @@ nav .fa-sharp, nav .fa-solid {
 
 @media only screen and (max-width: 1400px) {
     .main-blob {
-        width: 520px;
-        height: 520px;
+        width: 480px;
+        height: 480px;
     }
     .sub-title {
         font-size: 30px;
-    }
-    .sub-title.centered {
-        font-size: 100px;
     }
     .about-row {
         display: flex;
         flex-direction: row;
     }
-    .about-col-1 img {
-        display: none;
-    }
-    .about-col-2 {
-        flex-basis: 100%;
-    }
-
-    .about-card p, 
-    .about-card a {
-        font-size: 35px;
-    }
     #about-text {
         width: 550px;
         height: 200px;
+    }
+    .about-card p {
+        font-size: 15px;
+    }
+    .my-skills-blob {
+        width: 440px;
+        height: 440px;
+        margin: 15px auto 15px;
     }
 }
 
@@ -1130,22 +1041,22 @@ nav .fa-sharp, nav .fa-solid {
         height: 500px;
     }
     .header-text h1 {
-        font-size: 45px;
+        font-size: 40px;
     }
-    .sub-title.centered {
-        font-size: 90px;
+    .header-text p {
+        font-size: 20px;
     }
     #about-text {
         width: 450px;
         height: 120px;
     }
+    .my-skills-blob {
+        width: 400px;
+        height: 400px;
+    }
 }
 
 @media only screen and (max-width: 1315px) {
-    .sub-title.centered {
-        font-size: 85px;
-    }
-
     #about-text {
         width: 550px;
         height: 200px;
@@ -1155,11 +1066,10 @@ nav .fa-sharp, nav .fa-solid {
         width: 450px;
         height: 450px;
     }
-    .my-soft-skills-container ul li,
-    .my-hard-skills-container ul li {
-        font-size: 30px;
+    .my-skills-blob {
+        width: 470px;
+        height: 470px;
     }
-
     #about-text {
         width: 200px;
         height: 49px;
@@ -1168,20 +1078,22 @@ nav .fa-sharp, nav .fa-solid {
 
 @media only screen and (max-width: 1240px) {
     .sub-title.centered {
-        font-size: 75px;
+        font-size: 50px;
     }
     .about-card p, 
     .about-card a {
-        font-size: 35px;
+        font-size: 12px;
+    }
+    .my-skills-blob {
+        width: 320px;
+        height: 320px;
     }
     
-    .my-skills-blob {
-        width: 500px;
-        height: 500px;
-    }
     .my-soft-skills-container ul li,
     .my-hard-skills-container ul li {
-        font-size: 28px;
+        padding: 15px;
+        margin: 5px;
+        font-size: 15px;
     }
 
     .project-name {
@@ -1200,22 +1112,19 @@ nav .fa-sharp, nav .fa-solid {
 
 @media only screen and (max-width: 1200px) {
     .sub-title.centered {
-        font-size: 65px;
+        font-size: 43px;
     }
 
     .main-blob {
         width: 400px;
         height: 400px;
     }
-    .header-text h1 {
-        font-size: 45px;
-    }
 }
 
 @media only screen and (max-width: 1100px) {
     .main-blob {
-        width: 350px;
-        height: 350px;
+        width: 385px;
+        height: 385px;
     }
     .header-text h1 {
         font-size: 42px;
@@ -1224,9 +1133,17 @@ nav .fa-sharp, nav .fa-solid {
     .sub-title.centered {
         font-size: 65px;
     }
+    .about-card p, 
+    .about-card a {
+        font-size: 20px;
+        color: white;
+    }
 
     .about-row {
         display: flex;
+    }
+    .about-col-1 img {
+        display: none;
     }
     .about-col-1, .about-col-2 {
         flex-basis: 100%;
@@ -1239,12 +1156,12 @@ nav .fa-sharp, nav .fa-solid {
     }
 
     .my-skills-blob {
-        width: 470px;
-        height: 470px;
+        width: 300px;
+        height: 300px;
     }
     .my-soft-skills-container ul li,
     .my-hard-skills-container ul li {
-        font-size: 25px;
+        font-size: 12px;
     }
     #about-text {
         width: 160px;
@@ -1276,41 +1193,19 @@ nav .fa-sharp, nav .fa-solid {
     .header-text h1 {
         font-size: 35px;
     }
+    .header-text p {
+        font-size: 25px;
+    }
+
 
     .my-skills-blob {
-        width: 430px;
-        height: 430px;
+        width: 275px;
+        height: 275px;
     }
     .my-soft-skills-container ul li,
     .my-hard-skills-container ul li {
-        font-size: 23px;
+        font-size: 11px;
     }
-}
-
-@media only screen and (max-width: 970px) {
-    .contact-row {
-        display: flex;
-        flex-direction: column;
-    }
-    .sub-title {
-        font-size: 100px;
-    }
-    .contact-left p {
-        font-size: 50px;
-    }
-    .contact-left p i {
-        font-size: 50px;
-        margin-right: 25px;
-    }
-    .download-btn {
-        font-size: 40px;
-        padding: 40px;
-    }
-    .btn {
-        font-size: 40px;
-        padding: 40px;
-    }
-
 }
 
 @media only screen and (max-width: 1024px) and (max-height: 600px) {
@@ -1336,12 +1231,15 @@ nav .fa-sharp, nav .fa-solid {
         height: 320px;
     }
     .my-skills-blob {
-        width: 400px;
-        height: 400px;
+        width: 250px;
+        height: 250px;
+    }
+    .hard-skills-blob-text {
+        font-size: 10px;
     }
     .my-soft-skills-container ul li,
     .my-hard-skills-container ul li {
-        font-size: 21px;
+        font-size: 12px;
     }
 
     .project-name {
@@ -1351,7 +1249,6 @@ nav .fa-sharp, nav .fa-solid {
         font-size: 10px;
     }
 }
-
 
 @media only screen and (max-width: 912px) {
     .main-blob {
@@ -1364,14 +1261,35 @@ nav .fa-sharp, nav .fa-solid {
     .header-text h1 {
         font-size: 20px;
     }
+    .about-card p {
+        font-size: 20px;
+    }
+    .my-hard-skills-container {
+        flex-direction: column;
+    }
+    .my-soft-skills-container {
+        flex-direction: column-reverse;
+    }
+
+    .my-skills-blob {
+        width: 350px;
+        height: 350px;
+    }
+    .hard-skills-blob-text {
+        font-size: 10px;
+    }
+    .my-soft-skills-container ul li,
+    .my-hard-skills-container ul li {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 920px) {
     .header-text p {
-        font-size: 20px;
+        font-size: 15px;
     }
     .header-text h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
     .project-name {
         font-size: 15px;
@@ -1402,8 +1320,11 @@ nav .fa-sharp, nav .fa-solid {
     .project-button i {
         font-size: 8px;
     }
+    form input::placeholder, 
+    form textarea::placeholder {
+        font-size: 15px;
+    }
 }
-
 
 @media only screen and (max-width: 912px) and (max-height: 1368px) {
     .about-row {
@@ -1412,9 +1333,6 @@ nav .fa-sharp, nav .fa-solid {
     }
     .about-col-1 img {
         margin: 15px auto 15px;
-    }
-    .about-card p {
-        font-size: 35px;
     }
 }
 
@@ -1431,23 +1349,22 @@ nav .fa-sharp, nav .fa-solid {
         margin: 15px auto 15px;
     }
     .about-card p {
-        font-size: 25px;
+        font-size: 20px;
     }
     .contact-left p {
-        font-size: 40px;
+        font-size: 15px;
     }
     .contact-left p i {
-        font-size: 35px;
-        margin-right: 25px;
+        font-size: 25px;
+        margin-right: 15px;
     }
     .download-btn {
-        font-size: 40px;
+        font-size: 15px;
     }
     .project-button i {
         font-size: 8px;
     }
 }
-
 
 @media only screen and (max-width: 810px) {
     .main-blob {
@@ -1458,7 +1375,7 @@ nav .fa-sharp, nav .fa-solid {
         font-size: 15px;
     }
     .header-text h1 {
-        font-size: 25px;
+        font-size: 35px;
     }
 }
 
@@ -1472,11 +1389,22 @@ nav .fa-sharp, nav .fa-solid {
         height: 550px;
     }
     .header-text p {
-        font-size: 25px;
+        font-size: 35px;
     }
     .header-text h1 {
         font-size: 55px;
     }
+    form input::placeholder, 
+    form textarea::placeholder {
+        font-size: 15px;
+    }
+    .contact-left p {
+        font-size: 13px;
+    }
+    .contact-left p i {
+        font-size: 15px;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -1486,6 +1414,14 @@ nav .fa-sharp, nav .fa-solid {
     }
 }
 
+@media only screen and (max-width: 748px) {
+    .download-btn {
+        font-size: 13px;
+    }
+    .social-icons i {
+        font-size: 25px;
+    }
+}
 
 @media only screen and (max-width: 710px) {
     .main-blob {
@@ -1520,23 +1456,34 @@ nav .fa-sharp, nav .fa-solid {
     .projects-button {
         font-size: 20px;
     }
-}
-
-@media only screen and (max-width: 742px) {
-    .sub-title {
-        font-size: 70px;
+    .download-btn {
+        padding: 18px;
+        margin-top: 10px;
     }
 }
 
-@media only screen and (max-width: 700px) {
-    .contact-left, .contact-right {
-        flex-basis: 100%;
+@media only screen and (max-width: 660px) {
+    .contact-row {
+        display: flex;
+        flex-direction: column;
+    }
+    .social-icons i {
+        font-size: 35px;
+    }
+    .download-btn {
+        font-size: 25px;
+        padding: 20px;
+        margin-top: 20px;
     }
     .sub-title {
-        font-size: ;
+        font-size: 50px;
     }
     .contact-left p {
         font-size: 35px;
+    }
+    .contact-left p i {
+        font-size: 25px;
+        margin-right: 20px;
     }
 }
 
@@ -1567,6 +1514,9 @@ nav .fa-sharp, nav .fa-solid {
     .main-blob {
         width: 450px;
         height: 450px;
+    }
+    .container {
+        padding: 10px 5%;
     }
     .header-text p {
         font-size: 25px;
@@ -1636,15 +1586,13 @@ nav .fa-sharp, nav .fa-solid {
         margin: 5px;
         padding: 0px;
     }
+
 }
 
 @media only screen and (max-width: 600px) and (max-height: 1024px) {
     #about-text {
         width: 245px;
         height: 70px;
-    }
-    .about-card p {
-        font-size: 25px;
     }
 }
 
@@ -1675,11 +1623,9 @@ nav .fa-sharp, nav .fa-solid {
     .sub-title.centered {
         font-size: 38px;
     }
-    .about-card p {
-        font-size: 17px;
-    }
+    .about-card p,
     .about-card a {
-        font-size: 20px;
+        font-size: 17px;
     }
     .my-skills-blob {
         width: 270px;
@@ -1707,18 +1653,15 @@ nav .fa-sharp, nav .fa-solid {
 }
 
 @media only screen and (max-width: 510px) {
-    .container {
-        padding: 10px 5%;
-    }
     .main-blob {
-        width: 370px;
-        height: 370px;
+        width: 320px;
+        height: 320px;
     }
     .header-text p {
-        font-size: 25px;
+        font-size: 20px;
     }
     .header-text h1 {
-        font-size: 45px;
+        font-size: 30px;
     }
 }
 
@@ -1741,17 +1684,9 @@ nav .fa-sharp, nav .fa-solid {
     .projects-title {
         font-size: 45px;
     }
-}
-@media only screen and (max-width: 415px) {
-    .main-blob {
-        width: 300px;
-        height: 300px;
-    }
-    .header-text p {
-        font-size: 15px;
-    }
-    .header-text h1 {
-        font-size: 35px;
+    .about-card p,
+    .about-card a {
+        font-size: 14px;
     }
 }
 
@@ -1759,12 +1694,6 @@ nav .fa-sharp, nav .fa-solid {
     .main-blob {
         width: 180px;
         height: 180px;
-    }
-    .header-text p {
-        font-size: 15px;
-    }
-    .header-text h1 {
-        font-size: 20px;
     }
 }
 
@@ -1774,10 +1703,10 @@ nav .fa-sharp, nav .fa-solid {
         height: 320px;
     }
     .header-text p {
-        font-size: 25px;
+        font-size: 20px;
     }
     .header-text h1 {
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 
@@ -1787,10 +1716,10 @@ nav .fa-sharp, nav .fa-solid {
         height: 285px;
     }
     .header-text p {
-        font-size: 15px;
+        font-size: 23px;
     }
     .header-text h1 {
-        font-size: 35px;
+        font-size: 33px;
     }
 }
 
@@ -1799,15 +1728,23 @@ nav .fa-sharp, nav .fa-solid {
         font-size: 40px;
     }
     .main-blob {
-        width: 250px;
-        height: 250px;
+        width: 265px;
+        height: 265px;
+    }
+    .header-text p {
+        font-size: 20px;
+    }
+    .header-text h1 {
+        font-size: 30px;
     }
 }
+
 @media only screen and (max-width: 310px) {
     .contact-left p {
         font-size: 18px;
     }
 }
+
 @media only screen and (max-width: 300px) {
     .main-blob {
         width: 230px;
@@ -1835,6 +1772,12 @@ nav .fa-sharp, nav .fa-solid {
         font-size: 15px;
     }
     .contact-left p {
+        font-size: 15px;
+    }
+    .sub-title {
+        font-size: 30px;
+    }
+    .contact-left p, .contact-left p i {
         font-size: 15px;
     }
 }
